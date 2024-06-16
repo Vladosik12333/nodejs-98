@@ -22,4 +22,12 @@ export const createProductSchema = Joi.object({
   isPopular: Joi.boolean().default(false),
 });
 
+export const updateProductSchema = Joi.object({
+  name: Joi.string(),
+  price: Joi.number(),
+  count: Joi.number(),
+  countryCode: Joi.number(),
+  isPopular: Joi.boolean(),
+}).min(1);
+
 export default Product;
