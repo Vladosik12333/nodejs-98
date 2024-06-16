@@ -14,3 +14,13 @@ export const serviseUpdateProduct = async (id, payload) => {
   const product = await Product.findByIdAndUpdate(id, payload, { new: true });
   return product;
 };
+
+export const serviceGetProduct = async (id) => {
+  const product = await Product.findById(id);
+  return product;
+};
+
+export const serviceDeleteProduct = async (id) => {
+  const product = await Product.findByIdAndDelete(id);
+  return product;
+};
